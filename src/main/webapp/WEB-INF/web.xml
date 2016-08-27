@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+        <welcome-file-list>
+                <welcome-file>index.jsp</welcome-file>
+        </welcome-file-list>
+
+        <servlet>
+        <servlet-name>searchdata</servlet-name>
+        <servlet-class>web.ServletControl</servlet-class>
+        </servlet>
+        <servlet-mapping>
+        <servlet-name>searchdata</servlet-name>
+        <url-pattern>/searchdata</url-pattern>
+        </servlet-mapping>
+        <servlet>
+        <servlet-name>searchdata1</servlet-name>
+        <servlet-class>web.ServletSech</servlet-class>
+        </servlet>
+        <servlet-mapping>
+        <servlet-name>searchdata1</servlet-name>
+        <url-pattern>/searchdata1</url-pattern>
+        </servlet-mapping>
+        <servlet>
+        <servlet-name>registration</servlet-name>
+        <servlet-class>web.ServletRegistration</servlet-class>
+        </servlet>
+        <servlet-mapping>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+        </servlet-mapping>
+        <servlet>
+        <servlet-name>tariff</servlet-name>
+        <servlet-class>web.ServletTariff</servlet-class>
+        </servlet>
+        <servlet-mapping>
+        <servlet-name>tariff</servlet-name>
+        <url-pattern>/tariff</url-pattern>
+        </servlet-mapping>
+
+
+        <filter>
+                <filter-name>custom</filter-name>
+                <filter-class>web.FilterCheckLogin</filter-class>
+
+        </filter>
+
+
+        <filter-mapping>
+                <filter-name>custom</filter-name>
+                <url-pattern>/secure/*</url-pattern>
+        </filter-mapping>
+        <servlet>
+                <servlet-name>personalAccount</servlet-name>
+                <servlet-class>web.ServletPersonalParlor</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>personalAccount</servlet-name>
+                <url-pattern>/secure/personalaccount</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>personalpar</servlet-name>
+                <servlet-class>web.ServletPersonalParlor</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>personalpar</servlet-name>
+                <url-pattern>/personalparlor</url-pattern>
+        </servlet-mapping>
+        <!--<servlet>-->
+                <!--<servlet-name>personalparlor</servlet-name>-->
+                <!--<servlet-class>web.ServletPersonalParlor</servlet-class>-->
+        <!--</servlet>-->
+        <!--<servlet-mapping>-->
+                <!--<servlet-name>personal</servlet-name>-->
+                <!--<url-pattern>/personalparlor</url-pattern>-->
+        <!--</servlet-mapping>-->
+
+
+</web-app>
